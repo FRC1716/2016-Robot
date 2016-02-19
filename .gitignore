@@ -43,12 +43,12 @@ local.properties
 
 # Build results
 
-[Dd]ebug/
-[Rr]elease/
-x64/
-build/
-[Bb]in/
-[Oo]bj/
+EndGameCode2016/[Dd]ebug/
+EndGameCode2016/[Rr]elease/
+EndGameCode2016/x64/
+EndGameCode2016/build/
+EndGameCode2016/[Bb]in/
+EndGameCode2016/[Oo]bj/
 
 # MSTest test Results
 [Tt]est[Rr]esult*/
