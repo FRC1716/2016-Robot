@@ -29,7 +29,6 @@ void DriveC::Initialize() {
 
 // Called repeatedly when this Command is scheduled to run
 void DriveC::Execute() {
-	//Robot::controlSS->drive(Robot::oi->getJoystickLeft(), Robot::oi->getJoystickRight());
 	Robot::driveSubsystem->Drive(Robot::oi->getJoystickLeft(), Robot::oi->getJoystickRight());
 }
 
@@ -40,11 +39,11 @@ bool DriveC::IsFinished() {
 
 // Called once after isFinished returns true
 void DriveC::End() {
-
+	Robot::driveSubsystem->Stop();
 }
 
 // Called when another command which requires one or more of the same
 // subsystems is scheduled to run
 void DriveC::Interrupted() {
-
+	End();
 }
