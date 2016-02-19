@@ -47,13 +47,13 @@ void DriveSubsystem::InitDefaultCommand() {
 void DriveSubsystem::Drive(std::shared_ptr<Joystick> left, std::shared_ptr<Joystick> right){
 	leftControl->Set(left->GetY());
 	rightControl->Set(-right->GetY());
-	backDrive->TankDrive(left->GetY(), right->GetY());
+	backDrive->TankDrive(left->GetY(), -right->GetY());
 }
 
 void DriveSubsystem::Drive(float left, float right){
 	leftControl->Set(left);
 	rightControl->Set(-right);
-	backDrive->TankDrive(left, right);
+	backDrive->TankDrive(left, -right);
 }
 
 void DriveSubsystem::Stop(){
