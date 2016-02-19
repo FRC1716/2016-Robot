@@ -17,6 +17,8 @@
 std::shared_ptr<RobotDrive> RobotMap::controlSSRobotDrive;
 std::shared_ptr<AnalogInput> RobotMap::controlSSshooterGauge;
 std::shared_ptr<AnalogInput> RobotMap::controlSSarmGauge;
+std::shared_ptr<SpeedController> RobotMap::controlSSarm1;
+std::shared_ptr<SpeedController> RobotMap::controlSSarm2;
 
 std::shared_ptr<SpeedController> RobotMap::driveSubsystemLeftControl;
 std::shared_ptr<Encoder> RobotMap::driveSubsystemLeftEncoder;
@@ -39,6 +41,11 @@ void RobotMap::init() {
     controlSSarmGauge.reset(new AnalogInput(1));
     lw->AddSensor("ControlSS", "armGauge", controlSSarmGauge);
     
+    controlSSarm1.reset(new VictorSP(4));
+    lw->AddActuator("Subsystem1", "Speed Controller 1", std::static_pointer_cast<VictorSP>(controlSSarm1));
+
+    controlSSarm2.reset(new VictorSP(5));
+    lw->AddActuator("Subsystem1", "Speed Controller 2", std::static_pointer_cast<VictorSP>(controlSSarm2));
 
 
 

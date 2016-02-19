@@ -1,0 +1,7 @@
+PWM ports:
+1: drive motor (0)
+2: drive motor (1)
+3: drive motor (2)
+4: drive motor (3)
+5: arm motor (4)
+6: arm motor (5)
