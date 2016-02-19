@@ -33,13 +33,11 @@ public:
 
 	static std::shared_ptr<SpeedController> driveSubsystemLeftControl;
 		static std::shared_ptr<Encoder> driveSubsystemLeftEncoder;
-		static std::shared_ptr<PIDController> driveSubsystemLeftDrive;
 		static std::shared_ptr<Encoder> driveSubsystemRightEncoder;
 		static std::shared_ptr<SpeedController> driveSubsystemRightControl;
-		static std::shared_ptr<PIDController> driveSubsystemRightDrive;
 		static std::shared_ptr<SpeedController> driveSubsystemRearLeft;
 		static std::shared_ptr<SpeedController> driveSubsystemRearRight;
-		static std::shared_ptr<RobotDrive> driveSubsystemBackDrive;
+		static std::shared_ptr<RobotDrive> driveSubsystemDrive;
 		static std::shared_ptr<SpeedController> windowMotor;
 
 	//static std::shared_ptr<>

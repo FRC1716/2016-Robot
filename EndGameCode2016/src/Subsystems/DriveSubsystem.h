@@ -26,13 +26,11 @@ private:
 public:
 	std::shared_ptr<SpeedController> leftControl;
 	std::shared_ptr<Encoder> leftEncoder;
-	std::shared_ptr<PIDController> leftDrive;
 	std::shared_ptr<Encoder> rightEncoder;
 	std::shared_ptr<SpeedController> rightControl;
-	std::shared_ptr<PIDController> rightDrive;
 	std::shared_ptr<SpeedController> rearLeft;
 	std::shared_ptr<SpeedController> rearRight;
-	std::shared_ptr<RobotDrive> backDrive;
+	std::shared_ptr<RobotDrive> drive;
 
 	DriveSubsystem();
 	void InitDefaultCommand();

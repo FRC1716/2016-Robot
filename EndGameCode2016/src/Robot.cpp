@@ -126,6 +126,9 @@ void Robot::AutonomousPeriodic() {
 
 	SmartDashboard::PutNumber("Auto Time", Robot::controlSS->time->Get());
 
+	SmartDashboard::PutData("Positions", posSC);
+	SmartDashboard::PutData("Defense", defSC);
+
 	Robot::controlSS->updateShooter();
 	SmartDashboard::PutNumber("Shooter PSI", Robot::controlSS->shooterPSI);
 	SmartDashboard::PutBoolean("Can use shooter?", Robot::controlSS->shooterUse);
@@ -158,6 +161,9 @@ void Robot::TeleopPeriodic() {
 	Scheduler::GetInstance()->Run();
 
 	SmartDashboard::PutNumber("Teleop Time", Robot::controlSS->time->Get());
+
+	SmartDashboard::PutData("Positions", posSC);
+	SmartDashboard::PutData("Defense", defSC);
 
 	Robot::controlSS->updateShooter();
 	SmartDashboard::PutNumber("Shooter PSI", Robot::controlSS->shooterPSI);
