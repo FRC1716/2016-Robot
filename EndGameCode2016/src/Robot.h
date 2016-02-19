@@ -38,6 +38,7 @@
 #include "Commands/Def7.h"
 #include "Commands/Def8.h"
 #include "Commands/Def9.h"
+#include "Commands/DriveC.h"
 #include "Commands/windowForward.h"
 #include "Commands/windowReverse.h"
 
