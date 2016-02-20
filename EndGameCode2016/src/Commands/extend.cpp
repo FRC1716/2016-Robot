@@ -29,7 +29,7 @@ void extend::Initialize() {
 
 // Called repeatedly when this Command is scheduled to run
 void extend::Execute() {
-	Robot::controlSS->extend();
+	//Robot::controlSS->extend();
 }
 
 // Make this return true when this Command no longer needs to run execute()
@@ -39,7 +39,7 @@ bool extend::IsFinished() {
 
 // Called once after isFinished returns true
 void extend::End() {
-	Robot::controlSS->stopLinear();
+	//Robot::controlSS->stopLinear();
 }
 
 // Called when another command which requires one or more of the same

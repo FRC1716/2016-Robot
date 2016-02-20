@@ -30,7 +30,7 @@ void fireC::Initialize() {
 // Called repeatedly when this Command is scheduled to run
 void fireC::Execute() {
 	if (Robot::controlSS->loaded == true){
-		Robot::controlSS->runSequence(4);
+		//Robot::controlSS->runSequence(4);
 	}else{
 		SmartDashboard::PutString("Messages: ", "Not loaded");
 	}
@@ -49,5 +49,5 @@ void fireC::End() {
 // Called when another command which requires one or more of the same
 // subsystems is scheduled to run
 void fireC::Interrupted() {
-	Robot::controlSS->runSequence(5);
+	//Robot::controlSS->runSequence(5);
 }

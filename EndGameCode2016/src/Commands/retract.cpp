@@ -29,7 +29,7 @@ void retract::Initialize() {
 
 // Called repeatedly when this Command is scheduled to run
 void retract::Execute() {
-	Robot::controlSS->retract();
+	//Robot::controlSS->retract();
 }
 
 // Make this return true when this Command no longer needs to run execute()
@@ -39,7 +39,7 @@ bool retract::IsFinished() {
 
 // Called once after isFinished returns true
 void retract::End() {
-	Robot::controlSS->stopLinear();
+	//Robot::controlSS->stopLinear();
 }
 
 // Called when another command which requires one or more of the same
