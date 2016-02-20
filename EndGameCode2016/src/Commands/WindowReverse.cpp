@@ -29,7 +29,7 @@ void WindowReverse::Initialize() {
 
 // Called repeatedly when this Command is scheduled to run
 void WindowReverse::Execute() {
-	//Robot::controlSS->windowReverse();
+	Robot::controlSS->windowReverse();
 }
 
 // Make this return true when this Command no longer needs to run execute()
@@ -39,11 +39,11 @@ bool WindowReverse::IsFinished() {
 
 // Called once after isFinished returns true
 void WindowReverse::End() {
-	//Robot::controlSS->windowStop();
+	Robot::controlSS->windowStop();
 }
 
 // Called when another command which requires one or more of the same
 // subsystems is scheduled to run
 void WindowReverse::Interrupted() {
-	//Robot::controlSS->windowStop();
+	End();
 }

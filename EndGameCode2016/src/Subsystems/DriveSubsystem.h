@@ -40,6 +40,7 @@ public:
 	void Drive(std::shared_ptr<Joystick> left, std::shared_ptr<Joystick> right);
 	void Drive(float left, float right);
 	void Stop();
+	float CalculateRotations(float distance);
 
 	const int ticksPerRev = 360; //Assumed value. Needs testing
 };
