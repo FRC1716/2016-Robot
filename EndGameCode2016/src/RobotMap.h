@@ -27,8 +27,8 @@ public:
 	static std::shared_ptr<SpeedController> controlSSarm2;
 	/*static std::shared_ptr<RobotDrive> controlSSRobotDrive;
 	static std::shared_ptr<AnalogInput> controlSSshooterGauge;
-	static std::shared_ptr<AnalogInput> controlSSarmGauge;
-	static std::shared_ptr<AnalogGyro> controlSSgyro;*/
+	static std::shared_ptr<AnalogInput> controlSSarmGauge;*/
+	static std::shared_ptr<AnalogGyro> controlSSgyro;
 	static std::shared_ptr<SpeedController> driveSubsystemLeftControl;
 	static std::shared_ptr<Encoder> driveSubsystemLeftEncoder;
 	static std::shared_ptr<Encoder> driveSubsystemRightEncoder;

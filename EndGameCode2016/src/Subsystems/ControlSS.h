@@ -62,7 +62,7 @@ public:
 	std::shared_ptr<RobotDrive> robotDrive;
 	//std::shared_ptr<AnalogInput> shooterGauge;
 	//std::shared_ptr<AnalogInput> armGauge;
-	//std::shared_ptr<AnalogGyro> gyro;
+	std::shared_ptr<AnalogGyro> gyro;
 	//std::shared_ptr<Solenoid> latchSol[2];
 	//std::shared_ptr<Solenoid> loaderSol[2];
 	//std::shared_ptr<DigitalInput> frontLS;

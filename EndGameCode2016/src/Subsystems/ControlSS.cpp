@@ -24,12 +24,12 @@ ControlSS::ControlSS() : Subsystem("ControlSS") {
 	//initialize all variables
 	posNum = 0;
 	defNum = 0;
-	/*
+
 	windowNum = 0;
 	shooterPSI = 0.0;
 	armPSI = 0.0;
 	beginTime = 0.0;
-	angle = 0.0f;*/
+	angle = 0.0f;
 
 	//shooterUse = false;
 	//armUse = false;
@@ -44,15 +44,15 @@ ControlSS::ControlSS() : Subsystem("ControlSS") {
     //armGauge = RobotMap::controlSSarmGauge;
     armMotor1 = RobotMap::controlSSarm1;
     armMotor2 = RobotMap::controlSSarm2;
-    /*gyro = RobotMap::controlSSgyro;
-    frontLS = RobotMap::controlSSfrontLS;
-    backLS = RobotMap::controlSSbackLS;
-    sideLS = RobotMap::controlSSsideLS;
+    gyro = RobotMap::controlSSgyro;
+    //frontLS = RobotMap::controlSSfrontLS;
+    //backLS = RobotMap::controlSSbackLS;
+    //sideLS = RobotMap::controlSSsideLS;
 
 
     gyro->Reset();
 
-
+/*
     latchSol[0] = RobotMap::controlSSsolenoid1;
     latchSol[1] = RobotMap::controlSSsolenoid2;
     loaderSol[0] = RobotMap::controlSSsolenoid3;
@@ -200,13 +200,13 @@ void ControlSS::stopLinear(){
 void ControlSS::stopRotate(){
 	armMotor1->Set(0);
 }
-/*
+
 //gyro methods
 void ControlSS::updateGyro(){
 	angle = gyro->GetAngle();
 	Wait(0.3);
 }
-*/
+
 //utility methods
 void ControlSS::startTimer(){
 	beginTime = clock();

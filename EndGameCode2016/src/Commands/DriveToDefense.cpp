@@ -35,8 +35,10 @@ void DriveToDefense::Execute() {
 	Robot::driveSubsystem->leftEncoder->Reset();
 	Robot::driveSubsystem->rightEncoder->Reset();
 
-	while ((Robot::driveSubsystem->leftEncoder->Get() < (Robot::driveSubsystem->ticksPerRev * distance)) && (Robot::driveSubsystem->rightEncoder->Get() < (Robot::driveSubsystem->ticksPerRev * distance)))
+	while ((Robot::driveSubsystem->leftEncoder->Get() < (Robot::driveSubsystem->ticksPerRev * distance)) && (Robot::driveSubsystem->rightEncoder->Get() < (Robot::driveSubsystem->ticksPerRev * distance))){
 		Robot::driveSubsystem->Drive(0.5, 0.5);
+		SmartDashboard::PutNumber("Distance:", distance);
+	}
 }
 
 // Make this return true when this Command no longer needs to run execute()

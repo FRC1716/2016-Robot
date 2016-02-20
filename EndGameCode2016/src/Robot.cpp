@@ -108,9 +108,9 @@ void Robot::AutonomousInit() {
 	SmartDashboard::PutNumber("Defense selected:", Robot::controlSS->defNum);
 	SmartDashboard::PutBoolean("Sensitivity:", Robot::driveSubsystem->changeSensitivity);
 
-	//Robot::controlSS->updateGryo();
+	Robot::controlSS->updateGyro();
 	SmartDashboard::PutNumber("Gyro angle: ", Robot::controlSS->angle);
-	//SmartDashboard::PutNumber("DB/String 0", Robot::controlSS->angle);
+	SmartDashboard::PutNumber("DB/String 0", Robot::controlSS->angle);
 
 	/*Robot::controlSS->updateShooter();
 	SmartDashboard::PutNumber("Shooter PSI", Robot::controlSS->shooterPSI);
@@ -144,9 +144,9 @@ void Robot::AutonomousPeriodic() {
 	SmartDashboard::PutNumber("Defense selected:", Robot::controlSS->defNum);
 	SmartDashboard::PutBoolean("Sensitivity:", Robot::driveSubsystem->changeSensitivity);
 
-	//Robot::controlSS->updateGryo();
+	Robot::controlSS->updateGyro();
 	SmartDashboard::PutNumber("Gyro angle: ", Robot::controlSS->angle);
-	//SmartDashboard::PutNumber("DB/String 0", Robot::controlSS->angle);
+	SmartDashboard::PutNumber("DB/String 0", Robot::controlSS->angle);
 
 	SmartDashboard::PutNumber("Auto Time", Robot::controlSS->gameTimer->Get());
 
@@ -194,9 +194,9 @@ void Robot::TeleopInit() {
 	SmartDashboard::PutBoolean("Can use arm?", Robot::controlSS->armUse);
 	*/
 
-	//Robot::controlSS->updateGryo();
+	Robot::controlSS->updateGyro();
 	SmartDashboard::PutNumber("Gyro angle: ", Robot::controlSS->angle);
-	//SmartDashboard::PutNumber("DB/String 0", Robot::controlSS->angle);
+	SmartDashboard::PutNumber("DB/String 0", Robot::controlSS->angle);
 
 	SmartDashboard::PutNumber("Left Joystick:", Robot::oi->getJoystickLeft()->GetY());
 	SmartDashboard::PutNumber("Right Joystick:", Robot::oi->getJoystickRight()->GetY());
@@ -219,9 +219,9 @@ void Robot::TeleopPeriodic() {
 	SmartDashboard::PutData("Positions", posSC);
 	SmartDashboard::PutData("Defense", defSC);
 
-	//Robot::controlSS->updateGryo();
+	Robot::controlSS->updateGyro();
 	SmartDashboard::PutNumber("Gyro angle: ", Robot::controlSS->angle);
-	//SmartDashboard::PutNumber("DB/String 0", Robot::controlSS->angle);
+	SmartDashboard::PutNumber("DB/String 0", Robot::controlSS->angle);
 
 	//Robot::controlSS->updateShooter();
 	/*
@@ -249,9 +249,9 @@ void Robot::TeleopPeriodic() {
 void Robot::TestPeriodic() {
 	lw->Run();
 
-	//Robot::controlSS->updateGryo();
+	Robot::controlSS->updateGyro();
 	SmartDashboard::PutNumber("Gyro angle: ", Robot::controlSS->angle);
-	//SmartDashboard::PutNumber("DB/String 0", Robot::controlSS->angle);
+	SmartDashboard::PutNumber("DB/String 0", Robot::controlSS->angle);
 }
 
 START_ROBOT_CLASS(Robot);
