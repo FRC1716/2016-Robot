@@ -28,12 +28,12 @@ ControlSS::ControlSS() : Subsystem("ControlSS") {
 	windowNum = 0;
 	shooterPSI = 0.0;
 	armPSI = 0.0;
-	beginTime = 0.0;
+	beginTime = 0.0;*/
 	angle = 0.0f;
 
-	shooterUse = false;
-	armUse = false;
-	*/
+	//shooterUse = false;
+	//armUse = false;
+
 
 	gameTimer = new Timer();
 	gameTimer->Start();
@@ -202,20 +202,19 @@ void ControlSS::stopRotate(){
 }
 
 //gyro methods
-void ControlSS::updateGryo(){
+void ControlSS::updateGyro(){
 	angle = gyro->GetAngle();
 	Wait(0.3);
 }
 */
 //utility methods
-/*
 void ControlSS::startTimer(){
 	beginTime = clock();
 }
 double ControlSS::elapsedTime(){
 	return ((double) clock() - beginTime) * CLOCKS_PER_SEC;
 }
-*/
+
 //shooter methods
 //cylinder
    /* 0 = none

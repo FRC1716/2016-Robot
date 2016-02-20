@@ -59,7 +59,6 @@ OI::OI() {
     	joystickRB2->WhileHeld(new WindowForward());
 
     //left joystick buttons
-    	/*
     joystickLB11.reset(new JoystickButton(joystickLeft.get(), 11));
     	joystickLB11->WhenPressed(new manualLatchToggle());
     joystickLB10.reset(new JoystickButton(joystickLeft.get(), 10));
@@ -70,7 +69,6 @@ OI::OI() {
     	joystickLB2->WhenPressed(new loadC());
     joystickLB1.reset(new JoystickButton(joystickLeft.get(), 1));
     	joystickLB1->WhenPressed(new fireC());
-    	*/
 
     // SmartDashboard Buttons
     /*
