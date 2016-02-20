@@ -42,7 +42,8 @@ public:
 	void Drive(std::shared_ptr<Joystick> left, std::shared_ptr<Joystick> right);
 	void Drive(float left, float right);
 	void Stop();
-	float CalculateRotations(float distance);
+	double CalculateRotations(float distance);
+	float CalculateDistance(int ticks);
 	void sensitivityFalse();
 	void sensitivityTrue();
 

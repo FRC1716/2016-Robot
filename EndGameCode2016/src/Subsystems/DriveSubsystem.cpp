@@ -75,8 +75,13 @@ void DriveSubsystem::Stop(){
 	rightControl->Set(0);
 	drive->StopMotor();
 }
-float DriveSubsystem::CalculateRotations(float distance){
+
+double DriveSubsystem::CalculateRotations(float distance){
 	return distance/(4*M_PI);
+}
+
+float DriveSubsystem::CalculateDistance(int ticks){
+	return (ticks/ticksPerRev)*(4*M_PI);
 }
 
 void DriveSubsystem::sensitivityFalse(){

@@ -104,7 +104,7 @@ public:
 	void stopLinear();
 	void stopRotate();
 	//create gyro methods
-	void updateGryo();
+	void updateGyro();
 	//create utility methods
 	void wait(double seconds);
 	void startTimer();

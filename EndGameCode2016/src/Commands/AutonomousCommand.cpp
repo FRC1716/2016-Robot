@@ -41,6 +41,9 @@ AutonomousCommand::AutonomousCommand() {
 	AddSequential(new DriveToDefense());
 	Execute();
  }
+void AutonomousCommand::Initialize(){
+
+}
 
 // Called repeatedly when this Command is scheduled to run
 void AutonomousCommand::Execute() {
@@ -139,4 +142,16 @@ void AutonomousCommand::Execute() {
 			}
 		}
 	}
+}
+
+bool AutonomousCommand::IsFinished(){
+	return false;
+}
+
+void AutonomousCommand::End(){
+
+}
+
+void AutonomousCommand::Interrupted(){
+
 }
