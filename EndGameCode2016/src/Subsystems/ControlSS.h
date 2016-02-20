@@ -57,8 +57,8 @@ public:
 
 	//BuiltInAccelerometer* builtInAccel;
 
-	//std::shared_ptr<SpeedController> armMotor1;
-	//std::shared_ptr<SpeedController> armMotor2;
+	std::shared_ptr<SpeedController> armMotor1;
+	std::shared_ptr<SpeedController> armMotor2;
 	std::shared_ptr<RobotDrive> robotDrive;
 	//std::shared_ptr<AnalogInput> shooterGauge;
 	//std::shared_ptr<AnalogInput> armGauge;
