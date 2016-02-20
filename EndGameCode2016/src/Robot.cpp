@@ -141,6 +141,15 @@ void Robot::AutonomousPeriodic() {
 	Robot::controlSS->updateArm();
 	SmartDashboard::PutNumber("Arm PSI", Robot::controlSS->armPSI);
 	SmartDashboard::PutBoolean("Can use arm?", Robot::controlSS->armUse);
+
+	SmartDashboard::PutBoolean("Loader 1: ", Robot::controlSS->loaderSol[0]->Get());
+	SmartDashboard::PutBoolean("Loader 2: ", Robot::controlSS->loaderSol[1]->Get());
+	SmartDashboard::PutBoolean("Latch 1: ", Robot::controlSS->latchSol[0]->Get());
+	SmartDashboard::PutBoolean("Latch 2: ", Robot::controlSS->latchSol[1]->Get());
+	SmartDashboard::PutBoolean("Front Limit Switch: ", Robot::controlSS->frontLS->Get());
+	SmartDashboard::PutBoolean("Side Limit Switch: ", Robot::controlSS->sideLS->Get());
+	SmartDashboard::PutBoolean("Back Limit Switch: ", Robot::controlSS->backLS->Get());
+	SmartDashboard::PutBoolean("Loaded: ", Robot::controlSS->loaded);
 }
 
 void Robot::TeleopInit() {
@@ -182,6 +191,15 @@ void Robot::TeleopPeriodic() {
 	Robot::controlSS->updateArm();
 	SmartDashboard::PutNumber("Arm PSI", Robot::controlSS->armPSI);
 	SmartDashboard::PutBoolean("Can use arm?", Robot::controlSS->armUse);
+
+	SmartDashboard::PutBoolean("Loader 1: ", Robot::controlSS->loaderSol[0]->Get());
+	SmartDashboard::PutBoolean("Loader 2: ", Robot::controlSS->loaderSol[1]->Get());
+	SmartDashboard::PutBoolean("Latch 1: ", Robot::controlSS->latchSol[0]->Get());
+	SmartDashboard::PutBoolean("Latch 2: ", Robot::controlSS->latchSol[1]->Get());
+	SmartDashboard::PutBoolean("Front Limit Switch: ", Robot::controlSS->frontLS->Get());
+	SmartDashboard::PutBoolean("Side Limit Switch: ", Robot::controlSS->sideLS->Get());
+	SmartDashboard::PutBoolean("Back Limit Switch: ", Robot::controlSS->backLS->Get());
+	SmartDashboard::PutBoolean("Loaded: ", Robot::controlSS->loaded);
 }
 
 void Robot::TestPeriodic() {
