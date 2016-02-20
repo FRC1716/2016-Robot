@@ -19,7 +19,7 @@ std::shared_ptr<AnalogInput> RobotMap::controlSSshooterGauge;
 std::shared_ptr<AnalogInput> RobotMap::controlSSarmGauge;
 std::shared_ptr<SpeedController> RobotMap::controlSSarm1;
 std::shared_ptr<SpeedController> RobotMap::controlSSarm2;
-
+std::shared_ptr<AnalogGyro> RobotMap::controlSSgyro;
 std::shared_ptr<SpeedController> RobotMap::driveSubsystemLeftControl;
 std::shared_ptr<Encoder> RobotMap::driveSubsystemLeftEncoder;
 std::shared_ptr<Encoder> RobotMap::driveSubsystemRightEncoder;
@@ -36,18 +36,20 @@ void RobotMap::init() {
     LiveWindow *lw = LiveWindow::GetInstance();
 
     controlSSshooterGauge.reset(new AnalogInput(0));
-    lw->AddSensor("ControlSS", "shooterGauge", controlSSshooterGauge);
+    	lw->AddSensor("ControlSS", "shooterGauge", controlSSshooterGauge);
     
     controlSSarmGauge.reset(new AnalogInput(1));
-    lw->AddSensor("ControlSS", "armGauge", controlSSarmGauge);
+    	lw->AddSensor("ControlSS", "armGauge", controlSSarmGauge);
     
     controlSSarm1.reset(new VictorSP(4));
-    lw->AddActuator("Subsystem1", "Speed Controller 1", std::static_pointer_cast<VictorSP>(controlSSarm1));
+    	lw->AddActuator("Subsystem1", "Speed Controller 1", std::static_pointer_cast<VictorSP>(controlSSarm1));
 
     controlSSarm2.reset(new VictorSP(5));
-    lw->AddActuator("Subsystem1", "Speed Controller 2", std::static_pointer_cast<VictorSP>(controlSSarm2));
+    	lw->AddActuator("Subsystem1", "Speed Controller 2", std::static_pointer_cast<VictorSP>(controlSSarm2));
 
-
+    controlSSgyro.reset(new AnalogGyro(0));
+    	lw->AddSensor("ControlSS", "Gryo", controlSSgyro);
+    	controlSSgyro->SetSensitivity(0.007);
 
 
 

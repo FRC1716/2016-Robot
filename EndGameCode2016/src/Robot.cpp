@@ -77,7 +77,7 @@ void Robot::DisabledInit(){
 void Robot::DisabledPeriodic() {
 	Scheduler::GetInstance()->Run();
 
-	Robot::controlSS->time->Reset();
+	Robot::controlSS->gameTimer->Reset();
 
 	Robot::controlSS->updateShooter();
 	SmartDashboard::PutNumber("Shooter PSI", Robot::controlSS->shooterPSI);
@@ -98,6 +98,9 @@ void Robot::AutonomousInit() {
 	SmartDashboard::PutNumber("Position selected:", Robot::controlSS->posNum);
 	SmartDashboard::PutNumber("Defense selected:", Robot::controlSS->defNum);
 
+	Robot::controlSS->updateGryo();
+	SmartDashboard::PutNumber("Gryo angle: ", Robot::controlSS->angle);
+
 	Robot::controlSS->updateShooter();
 	SmartDashboard::PutNumber("Shooter PSI", Robot::controlSS->shooterPSI);
 	SmartDashboard::PutBoolean("Can use shooter?", Robot::controlSS->shooterUse);
@@ -106,7 +109,7 @@ void Robot::AutonomousInit() {
 	SmartDashboard::PutBoolean("Can use arm?", Robot::controlSS->armUse);
 
 	if (autonomousCommand.get() != nullptr){
-		Robot::controlSS->time->Reset();
+		Robot::controlSS->gameTimer->Reset();
 		autonomousCommand->Start();
 	}
 }
@@ -124,7 +127,10 @@ void Robot::AutonomousPeriodic() {
 	SmartDashboard::PutNumber("Position selected:", Robot::controlSS->posNum);
 	SmartDashboard::PutNumber("Defense selected:", Robot::controlSS->defNum);
 
-	SmartDashboard::PutNumber("Auto Time", Robot::controlSS->time->Get());
+	Robot::controlSS->updateGryo();
+	SmartDashboard::PutNumber("Gryo angle: ", Robot::controlSS->angle);
+
+	SmartDashboard::PutNumber("Auto Time", Robot::controlSS->gameTimer->Get());
 
 	SmartDashboard::PutData("Positions", posSC);
 	SmartDashboard::PutData("Defense", defSC);
@@ -150,9 +156,11 @@ void Robot::TeleopInit() {
 	SmartDashboard::PutNumber("Arm PSI", Robot::controlSS->armPSI);
 	SmartDashboard::PutBoolean("Can use arm?", Robot::controlSS->armUse);
 
+	Robot::controlSS->updateGryo();
+	SmartDashboard::PutNumber("Gryo angle: ", Robot::controlSS->angle);
 
 	if (autonomousCommand.get() != nullptr){
-		Robot::controlSS->time->Reset();
+		Robot::controlSS->gameTimer->Reset();
 		autonomousCommand->Cancel();
 	}
 }
@@ -160,10 +168,13 @@ void Robot::TeleopInit() {
 void Robot::TeleopPeriodic() {
 	Scheduler::GetInstance()->Run();
 
-	SmartDashboard::PutNumber("Teleop Time", Robot::controlSS->time->Get());
+	SmartDashboard::PutNumber("Teleop Time", Robot::controlSS->gameTimer->Get());
 
 	SmartDashboard::PutData("Positions", posSC);
 	SmartDashboard::PutData("Defense", defSC);
+
+	Robot::controlSS->updateGryo();
+	SmartDashboard::PutNumber("Gryo angle: ", Robot::controlSS->angle);
 
 	Robot::controlSS->updateShooter();
 	SmartDashboard::PutNumber("Shooter PSI", Robot::controlSS->shooterPSI);

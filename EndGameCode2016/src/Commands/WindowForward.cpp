@@ -29,7 +29,7 @@ void WindowForward::Initialize() {
 
 // Called repeatedly when this Command is scheduled to run
 void WindowForward::Execute() {
-	Robot::controlSS->windowForward();
+	//Robot::controlSS->windowForward();
 }
 
 // Make this return true when this Command no longer needs to run execute()
@@ -39,7 +39,7 @@ bool WindowForward::IsFinished() {
 
 // Called once after isFinished returns true
 void WindowForward::End() {
-	Robot::controlSS->windowStop();
+	//Robot::controlSS->windowStop();
 }
 
 // Called when another command which requires one or more of the same

@@ -29,7 +29,7 @@ void rotateOut::Initialize() {
 
 // Called repeatedly when this Command is scheduled to run
 void rotateOut::Execute() {
-	Robot::controlSS->Out();
+	Robot::controlSS->out();
 }
 
 // Make this return true when this Command no longer needs to run execute()
@@ -39,7 +39,7 @@ bool rotateOut::IsFinished() {
 
 // Called once after isFinished returns true
 void rotateOut::End() {
-	Robot::controlSS->Out();
+	Robot::controlSS->out();
 }
 
 // Called when another command which requires one or more of the same
