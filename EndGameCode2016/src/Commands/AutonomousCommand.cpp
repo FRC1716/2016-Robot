@@ -160,15 +160,3 @@ void AutonomousCommand::End() {
 void AutonomousCommand::Interrupted() {
 
 }
-
-bool AutonomousCommand::IsFinished(){
-	return false;
-}
-
-void AutonomousCommand::End(){
-
-}
-
-void AutonomousCommand::Interrupted(){
-
-}

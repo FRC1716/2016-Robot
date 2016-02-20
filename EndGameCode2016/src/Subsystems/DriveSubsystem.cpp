@@ -62,6 +62,9 @@ void DriveSubsystem::Drive(std::shared_ptr<Joystick> left, std::shared_ptr<Joyst
 			rightSquare = -rightSquare;
 		}
 
+		SmartDashboard::PutNumber("Squared left:", leftSquare);
+		SmartDashboard::PutNumber("Squared right:", rightSquare);
+
 		drive->TankDrive(leftSquare, rightSquare);
 	}
 }

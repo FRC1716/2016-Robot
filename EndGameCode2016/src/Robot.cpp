@@ -219,7 +219,7 @@ void Robot::TeleopPeriodic() {
 	SmartDashboard::PutData("Positions", posSC);
 	SmartDashboard::PutData("Defense", defSC);
 
-	Robot::controlSS->updateGyro();
+	//Robot::controlSS->updateGyro();
 	SmartDashboard::PutNumber("Gyro angle: ", Robot::controlSS->angle);
 	SmartDashboard::PutNumber("DB/String 0", Robot::controlSS->angle);
 
