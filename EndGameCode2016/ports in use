@@ -5,3 +5,13 @@ PWM ports:
 4: drive motor (3)
 5: arm motor (4)
 6: arm motor (5)
+7: window motor (6)
+
+Analog ports:
+1: gyro (0)
+2: pressure gauge (1)
+
+DIO ports:
+1: front limit switch (0)
+2: back limit switch (1)
+3: side limit switch (2)

@@ -47,13 +47,7 @@ void RobotMap::init() {
     	lw->AddSensor("ControlSS", "Gryo", controlSSgyro);
     	controlSSgyro->SetSensitivity(0.007);
 
-    controlSSshooterGauge.reset(new AnalogInput(1));
-    	lw->AddSensor("ControlSS", "shooterGauge", controlSSshooterGauge);
-    
-    controlSSarmGauge.reset(new AnalogInput(2));
-    	lw->AddSensor("ControlSS", "armGauge", controlSSarmGauge);
-
-    controlSSpressureGauge.reset(new AnalogInput(3));
+    controlSSpressureGauge.reset(new AnalogInput(1));
         lw->AddSensor("ControlSS", "pressureGauge", controlSSpressureGauge);
     
     controlSSarm1.reset(new VictorSP(4));
@@ -111,7 +105,7 @@ void RobotMap::init() {
         driveSubsystemDrive->SetSensitivity(0.5);
         driveSubsystemDrive->SetMaxOutput(1.0);
 
-    windowMotor.reset(new VictorSP(5));
+    windowMotor.reset(new VictorSP(6));
         lw->AddActuator("ControlSS", "Intake", (VictorSP&) windowMotor);
 
         /*controlSSshooterGauge.reset(new AnalogInput(0));
