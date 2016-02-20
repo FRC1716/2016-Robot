@@ -171,8 +171,7 @@ void ControlSS::windowReverse(){
 void ControlSS::windowStop(){
 	windowMotor->Set(Relay::Value::kOff);
 	windowNum = 0;
-}
-*/
+}*/
 
 //methods for arm
 void ControlSS::out() {
