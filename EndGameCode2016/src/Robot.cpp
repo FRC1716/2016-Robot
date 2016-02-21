@@ -85,13 +85,6 @@ void Robot::DisabledPeriodic() {
 	Scheduler::GetInstance()->Run();
 
 	Robot::controlSS->gameTimer->Reset();
-
-	//Robot::controlSS->updateShooter();
-	SmartDashboard::PutNumber("Shooter PSI", Robot::controlSS->shooterPSI);
-	SmartDashboard::PutBoolean("Can use shooter?", Robot::controlSS->shooterUse);
-	//Robot::controlSS->updateArm();
-	SmartDashboard::PutNumber("Arm PSI", Robot::controlSS->armPSI);
-	SmartDashboard::PutBoolean("Can use arm?", Robot::controlSS->armUse);
 }
 
 void Robot::AutonomousInit() {
@@ -111,13 +104,6 @@ void Robot::AutonomousInit() {
 	Robot::controlSS->updateGyro();
 	SmartDashboard::PutNumber("Gyro angle: ", Robot::controlSS->angle);
 	SmartDashboard::PutNumber("DB/String 0", Robot::controlSS->angle);
-
-	/*Robot::controlSS->updateShooter();
-	SmartDashboard::PutNumber("Shooter PSI", Robot::controlSS->shooterPSI);
-	SmartDashboard::PutBoolean("Can use shooter?", Robot::controlSS->shooterUse);
-	Robot::controlSS->updateArm();
-	SmartDashboard::PutNumber("Arm PSI", Robot::controlSS->armPSI);
-	SmartDashboard::PutBoolean("Can use arm?", Robot::controlSS->armUse);*/
 
 	SmartDashboard::PutNumber("Left Joystick:", Robot::oi->getJoystickLeft()->GetY());
 	SmartDashboard::PutNumber("Right Joystick:", Robot::oi->getJoystickRight()->GetY());
@@ -153,15 +139,6 @@ void Robot::AutonomousPeriodic() {
 	SmartDashboard::PutData("Positions", posSC);
 	SmartDashboard::PutData("Defense", defSC);
 
-	/*
-	Robot::controlSS->updateShooter();
-	SmartDashboard::PutNumber("Shooter PSI", Robot::controlSS->shooterPSI);
-	SmartDashboard::PutBoolean("Can use shooter?", Robot::controlSS->shooterUse);
-	Robot::controlSS->updateArm();
-	SmartDashboard::PutNumber("Arm PSI", Robot::controlSS->armPSI);
-	SmartDashboard::PutBoolean("Can use arm?", Robot::controlSS->armUse);*/
-
-	/*
 	SmartDashboard::PutBoolean("Loader 1: ", Robot::controlSS->loaderSol[0]->Get());
 	SmartDashboard::PutBoolean("Loader 2: ", Robot::controlSS->loaderSol[1]->Get());
 	SmartDashboard::PutBoolean("Latch 1: ", Robot::controlSS->latchSol[0]->Get());
@@ -170,7 +147,6 @@ void Robot::AutonomousPeriodic() {
 	SmartDashboard::PutBoolean("Side Limit Switch: ", Robot::controlSS->sideLS->Get());
 	SmartDashboard::PutBoolean("Back Limit Switch: ", Robot::controlSS->backLS->Get());
 	SmartDashboard::PutBoolean("Loaded: ", Robot::controlSS->loaded);
-	*/
 
 	SmartDashboard::PutNumber("Left Joystick:", Robot::oi->getJoystickLeft()->GetY());
 	SmartDashboard::PutNumber("Right Joystick:", Robot::oi->getJoystickRight()->GetY());
@@ -184,15 +160,6 @@ void Robot::TeleopInit() {
 	Command* temp3 = (Command*) senSC->GetSelected();
 	temp3->Run();
 	SmartDashboard::PutBoolean("Sensitivity:", Robot::driveSubsystem->changeSensitivity);
-
-	//Robot::controlSS->updateShooter();
-	/*
-	SmartDashboard::PutNumber("Shooter PSI", Robot::controlSS->shooterPSI);
-	SmartDashboard::PutBoolean("Can use shooter?", Robot::controlSS->shooterUse);
-	//Robot::controlSS->updateArm();
-	SmartDashboard::PutNumber("Arm PSI", Robot::controlSS->armPSI);
-	SmartDashboard::PutBoolean("Can use arm?", Robot::controlSS->armUse);
-	*/
 
 	Robot::controlSS->updateGyro();
 	SmartDashboard::PutNumber("Gyro angle: ", Robot::controlSS->angle);
@@ -223,16 +190,6 @@ void Robot::TeleopPeriodic() {
 	SmartDashboard::PutNumber("Gyro angle: ", Robot::controlSS->angle);
 	SmartDashboard::PutNumber("DB/String 0", Robot::controlSS->angle);
 
-	//Robot::controlSS->updateShooter();
-	/*
-	SmartDashboard::PutNumber("Shooter PSI", Robot::controlSS->shooterPSI);
-	SmartDashboard::PutBoolean("Can use shooter?", Robot::controlSS->shooterUse);
-	//Robot::controlSS->updateArm();
-	SmartDashboard::PutNumber("Arm PSI", Robot::controlSS->armPSI);
-	SmartDashboard::PutBoolean("Can use arm?", Robot::controlSS->armUse);
-	*/
-
-	/*
 	SmartDashboard::PutBoolean("Loader 1: ", Robot::controlSS->loaderSol[0]->Get());
 	SmartDashboard::PutBoolean("Loader 2: ", Robot::controlSS->loaderSol[1]->Get());
 	SmartDashboard::PutBoolean("Latch 1: ", Robot::controlSS->latchSol[0]->Get());
@@ -241,7 +198,7 @@ void Robot::TeleopPeriodic() {
 	SmartDashboard::PutBoolean("Side Limit Switch: ", Robot::controlSS->sideLS->Get());
 	SmartDashboard::PutBoolean("Back Limit Switch: ", Robot::controlSS->backLS->Get());
 	SmartDashboard::PutBoolean("Loaded: ", Robot::controlSS->loaded);
-*/
+
 	SmartDashboard::PutNumber("Left Joystick:", Robot::oi->getJoystickLeft()->GetY());
 	SmartDashboard::PutNumber("Right Joystick:", Robot::oi->getJoystickRight()->GetY());
 }

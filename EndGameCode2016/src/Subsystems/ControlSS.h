@@ -53,22 +53,18 @@ public:
 
 	Timer* gameTimer;
 
-	//Relay* windowMotor;
-
 	//BuiltInAccelerometer* builtInAccel;
 
 	std::shared_ptr<SpeedController> armMotor1;
 	std::shared_ptr<SpeedController> armMotor2;
 	std::shared_ptr<RobotDrive> robotDrive;
-	//std::shared_ptr<AnalogInput> shooterGauge;
-	//std::shared_ptr<AnalogInput> armGauge;
 	std::shared_ptr<AnalogGyro> gyro;
-	//std::shared_ptr<Solenoid> latchSol[2];
-	//std::shared_ptr<Solenoid> loaderSol[2];
-	//std::shared_ptr<DigitalInput> frontLS;
-	//std::shared_ptr<DigitalInput> backLS;
-	//std::shared_ptr<DigitalInput> sideLS;
-	//std::shared_ptr<AnalogInput> pressureGauge;
+	std::shared_ptr<Solenoid> latchSol[2];
+	std::shared_ptr<Solenoid> loaderSol[2];
+	std::shared_ptr<DigitalInput> frontLS;
+	std::shared_ptr<DigitalInput> backLS;
+	std::shared_ptr<DigitalInput> sideLS;
+	std::shared_ptr<AnalogInput> pressureGauge;
 
 	//create methods to control drive
 	void drive(std::shared_ptr<Joystick> left, std::shared_ptr<Joystick> right);
