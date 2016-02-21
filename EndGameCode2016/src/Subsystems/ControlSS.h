@@ -33,6 +33,7 @@ public:
 	//variables to store position and defense values
 	int posNum;
 	int defNum;
+	int afterNum;
 	int windowNum;
 	int loadingPressure;
 	int firingPressure;
@@ -43,11 +44,11 @@ public:
 
 	float angle;
 
-	bool shooterUse;
-	bool armUse;
 	bool latchState;//0 = latchSol[0] & 1 = latchSol[1]
 	bool loaderState;//0 = loaderSol[0] & 1 = loaderSol[1]
 	bool loaded;
+	bool canBreach;
+	bool canReverse;
 
 	static constexpr float kP = 0.03f;
 
@@ -92,6 +93,12 @@ public:
 	void setDef7();
 	void setDef8();
 	void setDef9();
+	//create methods to set after number
+	void setAfter1();
+	void setAfter2();
+	void setAfter3();
+	void setAfter4();
+	void setAfter5();
 	//create arm methods
 	void out();
 	void in();

@@ -24,12 +24,13 @@ ControlSS::ControlSS() : Subsystem("ControlSS") {
 	//initialize all variables
 	posNum = 0;
 	defNum = 0;
-
+	afterNum = 0;
 	windowNum = 0;
-	shooterPSI = 0.0;
-	armPSI = 0.0;
 	beginTime = 0.0;
 	angle = 0.0f;
+
+	canBreach = false;
+	canReverse = false;
 
 	gameTimer = new Timer();
 	gameTimer->Start();
@@ -42,7 +43,6 @@ ControlSS::ControlSS() : Subsystem("ControlSS") {
     frontLS = RobotMap::controlSSfrontLS;
     backLS = RobotMap::controlSSbackLS;
     sideLS = RobotMap::controlSSsideLS;
-
 
     gyro->Reset();
 
@@ -97,30 +97,65 @@ void ControlSS::setPos5(){
 //defense methods
 void ControlSS::setDef1(){
 	defNum = 1;
+	//canBreach = false;
+	//canReverse = false;
 }
 void ControlSS::setDef2(){
 	defNum = 2;
+	canBreach = false;
+	canReverse = false;
 }
 void ControlSS::setDef3(){
 	defNum = 3;
+	//canBreach = false;
+	//canReverse = false;
 }
 void ControlSS::setDef4(){
 	defNum = 4;
+	canBreach = true;
+	canReverse = true;
 }
 void ControlSS::setDef5(){
 	defNum = 5;
+	canBreach = true;
+	//canReverse = false;
 }
 void ControlSS::setDef6(){
 	defNum = 6;
+	//canBreach = false;
+	canReverse = true;
 }
 void ControlSS::setDef7(){
 	defNum = 7;
+	//canBreach = false;
+	canReverse = true;
 }
 void ControlSS::setDef8(){
 	defNum = 8;
+	canBreach = true;
+	canReverse = true;
 }
 void ControlSS::setDef9(){
 	defNum = 9;
+	canBreach = true;
+	canReverse = true;
+}
+
+//after outer-works methods
+void ControlSS::setAfter1(){
+	afterNum = 1;
+}
+void ControlSS::setAfter2(){
+	afterNum = 2;
+}
+void ControlSS::setAfter3(){
+	afterNum = 3;
+}
+void ControlSS::setAfter4(){
+	afterNum = 4;
+}
+void ControlSS::setAfter5(){
+	afterNum = 5;
 }
 
 //methods to control window motor
