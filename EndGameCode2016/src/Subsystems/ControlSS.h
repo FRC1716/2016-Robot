@@ -33,7 +33,7 @@ public:
 	//variables to store position and defense values
 	int posNum;
 	int defNum;
-	int afterNum;
+	double afterNum;
 	int windowNum;
 	int loadingPressure;
 	int firingPressure;

@@ -1,5 +1,5 @@
 Defense:		Can breach:		Can reverse
-Low bar:		???:			???
+Low bar:		false:			false
 Portcullis:		false:			false
 Cheval de frise:not attempted:	not attempted
 Moat:			true:			true

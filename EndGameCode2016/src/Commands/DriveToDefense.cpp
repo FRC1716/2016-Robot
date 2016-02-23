@@ -31,19 +31,27 @@ void DriveToDefense::Initialize() {
 
 // Called repeatedly when this Command is scheduled to run
 void DriveToDefense::Execute() {
-	//Reset encoders
+	/*//Reset encoders
 	Robot::driveSubsystem->leftEncoder->Reset();
 	Robot::driveSubsystem->rightEncoder->Reset();
 
 	while ((Robot::driveSubsystem->leftEncoder->Get() < (Robot::driveSubsystem->ticksPerRev * distance)) && (Robot::driveSubsystem->rightEncoder->Get() < (Robot::driveSubsystem->ticksPerRev * distance))){
 		Robot::driveSubsystem->Drive(0.5, 0.5);
 		SmartDashboard::PutNumber("Distance:", distance);
-	}
+	}*/
+	Robot::driveSubsystem->Drive(-0.5 * 1.1, -0.5);//1.715
 }
 
 // Make this return true when this Command no longer needs to run execute()
 bool DriveToDefense::IsFinished() {
-    return (Robot::driveSubsystem->leftEncoder->Get() < (Robot::driveSubsystem->ticksPerRev * distance)) && (Robot::driveSubsystem->rightEncoder->Get() < (Robot::driveSubsystem->ticksPerRev * distance));
+    //return (Robot::driveSubsystem->leftEncoder->Get() < (Robot::driveSubsystem->ticksPerRev * distance)) && (Robot::driveSubsystem->rightEncoder->Get() < (Robot::driveSubsystem->ticksPerRev * distance));
+	if(std::abs(Robot::driveSubsystem->leftEncoder->Get()) < 1000){
+		return false;
+	}
+
+	Robot::driveSubsystem->leftEncoder->Reset();
+	Robot::driveSubsystem->rightEncoder->Reset();
+    return true;
 }
 
 // Called once after isFinished returns true

@@ -143,19 +143,19 @@ void ControlSS::setDef9(){
 
 //after outer-works methods
 void ControlSS::setAfter1(){
-	afterNum = 1;
+	afterNum = 1.0;
 }
 void ControlSS::setAfter2(){
-	afterNum = 2;
+	afterNum = 2.0;
 }
 void ControlSS::setAfter3(){
-	afterNum = 3;
+	afterNum = 3.0;
 }
 void ControlSS::setAfter4(){
-	afterNum = 4;
+	afterNum = 10.0;
 }
 void ControlSS::setAfter5(){
-	afterNum = 5;
+	afterNum = 5.0;
 }
 
 //methods to control window motor

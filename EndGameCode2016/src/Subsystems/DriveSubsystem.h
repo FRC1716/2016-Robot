@@ -32,6 +32,11 @@ public:
 	std::shared_ptr<SpeedController> rearRight;
 	std::shared_ptr<RobotDrive> drive;
 
+	int dist;
+
+	double lastMult;
+	double multiplier;
+
 	bool changeSensitivity;
 
 	DriveSubsystem();
@@ -46,6 +51,8 @@ public:
 	float CalculateDistance(int ticks);
 	void sensitivityFalse();
 	void sensitivityTrue();
+	void driveStraight(std::shared_ptr<Joystick> left, std::shared_ptr<Joystick> right);
+	void driveStraight(double left, double right);
 
 	const int ticksPerRev = 360; //Assumed value. Needs testing
 };
