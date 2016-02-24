@@ -1,11 +1,12 @@
-Defense:		Can breach:		Can reverse
-Low bar:		false:			false
-Portcullis:		false:			false
-Cheval de frise:not attempted:	not attempted
-Moat:			true:			true
-Ramparts:		true:			???
-Drawbridge:		not attempted:	true
-Sally port:		not attempted:	true
-Rock wall:		true:			false
-Rough terrain:	true:			true
+# Defense:			Can breach:		Can reverse
+9 Low bar:			false:			false
+2 Portcullis:		not attempted:	not attempted
+3 Cheval de frise:	not attempted:	not attempted
+4 Moat:				true:			true
+5 Ramparts:			true:			???
+6 Drawbridge:		not attempted:	true
+7 Sally port:		not attempted:	true
+8 Rock wall:		true:			false
+1 Rough terrain:	true:			true
+
 31.25 ticks per inch

@@ -8,6 +8,7 @@ Def9CG::Def9CG()
 	//sets values based on this defense
 	Robot::controlSS->canBreach = false;
 	Robot::controlSS->canReverse = false;
+	Robot::controlSS->defNum = 9;
 	//drive to defense
 	AddSequential(new DriveToDefense);
 }

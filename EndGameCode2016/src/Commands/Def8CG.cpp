@@ -10,6 +10,7 @@ Def8CG::Def8CG()
 	//sets values based on this defense
 	Robot::controlSS->canBreach = true;
 	Robot::controlSS->canReverse = false;
+	Robot::controlSS->defNum = 8;
 	//drive to defense
 	AddSequential(new DriveToDefense);
 	//do stuff with defense

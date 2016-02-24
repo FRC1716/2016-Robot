@@ -10,6 +10,7 @@ Def4CG::Def4CG()
 	//sets values based on this defense
 	Robot::controlSS->canBreach = true;
 	Robot::controlSS->canReverse = true;
+	Robot::controlSS->defNum = 4;
 	//drives to defense
 	AddSequential(new DriveToDefense);
 	//does stuff with defense

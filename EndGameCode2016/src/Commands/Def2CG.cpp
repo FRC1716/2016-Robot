@@ -7,8 +7,9 @@ Def2CG::Def2CG()
 {
 	//PORTCULLIS
 	//sets values based on this defense
-	Robot::controlSS->canBreach = false;
-	Robot::controlSS->canReverse = false;
+	Robot::controlSS->canBreach = true;
+	Robot::controlSS->canReverse = true;
+	Robot::controlSS->defNum = 2;
 	//drives to the defense
 	AddSequential(new DriveToDefense);
 	//does stuff with defense
