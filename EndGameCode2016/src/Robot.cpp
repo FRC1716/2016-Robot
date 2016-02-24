@@ -271,10 +271,6 @@ void Robot::TeleopPeriodic() {
 
 void Robot::TestPeriodic() {
 	lw->Run();
-
-	Robot::controlSS->updateGyro();
-	SmartDashboard::PutNumber("Gyro angle: ", Robot::controlSS->angle);
-	SmartDashboard::PutNumber("DB/String 0", Robot::controlSS->angle);
 }
 
 START_ROBOT_CLASS(Robot);

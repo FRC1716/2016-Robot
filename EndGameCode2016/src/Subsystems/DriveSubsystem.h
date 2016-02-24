@@ -53,6 +53,8 @@ public:
 	void sensitivityTrue();
 	void driveStraight(std::shared_ptr<Joystick> left, std::shared_ptr<Joystick> right);
 	void driveStraight(double left, double right);
+	void slowLeft();
+	void slowRight();
 
 	const int ticksPerRev = 360; //Assumed value. Needs testing
 };

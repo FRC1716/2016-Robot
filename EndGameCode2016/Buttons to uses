@@ -1,26 +1,27 @@
 Left Joystick:
 Y-Axis: left side driving
-1: 
-2:
-3:
+1(trigger): 
+2: intake down (added)
+3: intake up (added)
 4:
 
 Right Joystick:
 Y-Axis: right side driving
-1:
-2:
-3:
-4:
-10: toggle loader command
-11: toggle latch command
+1(trigger):
+2: TEMPORARY rotate arm down (added)
+3: TEMPORARY rotate arm up (added)
+4: TEMPORARY extend arm (added)
+5: TEMPORARY retract arm (added)
+10: toggle loader command (added)
+11: toggle latch command (added)
 
 Shooter Joystick:
 Y-Axis: raise and lower shooter
 Mini Y-Axis: up extends hooks and down lowers hooks
-1: fire command
-2: unlock fire button
-3: slowly move left
-4: slowly move right
-5: load command
-6: assisted reset command
+1(trigger): fire command (added)
+2: unlock fire button (added)
+3: slowly move left (need code)
+4: slowly move right (need code)
+5: load command (added)
+6: assisted reset command (added)
 7?: lower sensitivity

@@ -143,3 +143,11 @@ void DriveSubsystem::driveStraight(double left, double right){
 
 	drive->TankDrive(leftControl->Get(), rightControl->Get(), false);
 }
+
+void DriveSubsystem::slowLeft(){
+
+}
+
+void DriveSubsystem::slowRight(){
+
+}

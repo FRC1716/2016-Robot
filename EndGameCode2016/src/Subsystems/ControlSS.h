@@ -49,6 +49,7 @@ public:
 	bool loaded;
 	bool canBreach;
 	bool canReverse;
+	bool locked;
 
 	static constexpr float kP = 0.03f;
 
@@ -56,8 +57,9 @@ public:
 
 	//BuiltInAccelerometer* builtInAccel;
 
-	std::shared_ptr<SpeedController> armMotor1;
-	std::shared_ptr<SpeedController> armMotor2;
+	std::shared_ptr<SpeedController> armAngle1;
+	std::shared_ptr<SpeedController> armAngle2;
+	std::shared_ptr<SpeedController> armExtend1;
 	std::shared_ptr<RobotDrive> robotDrive;
 	std::shared_ptr<AnalogGyro> gyro;
 	std::shared_ptr<Solenoid> latchSol[2];
@@ -122,6 +124,8 @@ public:
 	void waitForPSI(int x);
 	void runSequence(int x);
 	void reset();
+	void unlockShooter();
+	void lockShooter();
 	//create methods for intake
 	void UpIntake();
 	void DownIntake();
