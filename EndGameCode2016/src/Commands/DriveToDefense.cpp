@@ -31,15 +31,7 @@ void DriveToDefense::Initialize() {
 
 // Called repeatedly when this Command is scheduled to run
 void DriveToDefense::Execute() {
-	/*//Reset encoders
-	Robot::driveSubsystem->leftEncoder->Reset();
-	Robot::driveSubsystem->rightEncoder->Reset();
-
-	while ((Robot::driveSubsystem->leftEncoder->Get() < (Robot::driveSubsystem->ticksPerRev * distance)) && (Robot::driveSubsystem->rightEncoder->Get() < (Robot::driveSubsystem->ticksPerRev * distance))){
-		Robot::driveSubsystem->Drive(0.5, 0.5);
-		SmartDashboard::PutNumber("Distance:", distance);
-	}*/
-	Robot::driveSubsystem->Drive(-0.5 * 1.1, -0.5);//1.715
+	Robot::driveSubsystem->Drive(-0.5 + (Robot::controlSS->angle * Robot::controlSS->kP), -0.5 - (Robot::controlSS->angle * Robot::controlSS->kP));//1.715 1.1
 }
 
 // Make this return true when this Command no longer needs to run execute()

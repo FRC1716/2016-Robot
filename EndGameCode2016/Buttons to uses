@@ -1,0 +1,26 @@
+Left Joystick:
+Y-Axis: left side driving
+1: 
+2:
+3:
+4:
+
+Right Joystick:
+Y-Axis: right side driving
+1:
+2:
+3:
+4:
+10: toggle loader command
+11: toggle latch command
+
+Shooter Joystick:
+Y-Axis: raise and lower shooter
+Mini Y-Axis: up extends hooks and down lowers hooks
+1: fire command
+2: unlock fire button
+3: slowly move left
+4: slowly move right
+5: load command
+6: assisted reset command
+7?: lower sensitivity

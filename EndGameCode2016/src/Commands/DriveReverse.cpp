@@ -35,7 +35,7 @@ void DriveReverse::Execute() {
 
 	//drives to defense
 
-		Robot::driveSubsystem->Drive(0.75 * 1.075, 0.75);//1.715
+		Robot::driveSubsystem->Drive(0.5 * 1.075, 0.5);//1.715
 
 		SmartDashboard::PutNumber("Left encoder", std::abs(Robot::driveSubsystem->leftEncoder->Get()));
 		SmartDashboard::PutNumber("Right encoder", std::abs(Robot::driveSubsystem->rightEncoder->Get()));

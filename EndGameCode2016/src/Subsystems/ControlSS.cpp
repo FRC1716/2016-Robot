@@ -63,6 +63,8 @@ ControlSS::ControlSS() : Subsystem("ControlSS") {
     latchState = latchSol[0]->Get();
     updateSols(0);
 
+    intakeMotor = RobotMap::controlSSintake;
+
     //initialize a text box on smartdashboard
     SmartDashboard::PutString("Messages: ", "---");
 
@@ -141,49 +143,6 @@ void ControlSS::setDef9(){
 	canReverse = true;
 }
 
-//after outer-works methods
-void ControlSS::setAfter1(){
-	afterNum = 1.0;
-}
-void ControlSS::setAfter2(){
-	afterNum = 2.0;
-}
-void ControlSS::setAfter3(){
-	afterNum = 3.0;
-}
-void ControlSS::setAfter4(){
-	afterNum = 10.0;
-}
-void ControlSS::setAfter5(){
-	afterNum = 5.0;
-}
-
-//methods to control window motor
-/*void ControlSS::windowForward(){
-	windowNum = windowMotor->Get();
-
-	if (windowNum == 0){
-		windowMotor->Set(Relay::Value::kOn);
-		windowMotor->Set(Relay::Value::kForward);
-	}else if (windowNum == -1){
-		windowMotor->Set(Relay::Value::kForward);
-	}
-}
-void ControlSS::windowReverse(){
-	windowNum = windowMotor->Get();
-
-	if (windowNum == 0){
-		windowMotor->Set(Relay::Value::kOn);
-		windowMotor->Set(Relay::Value::kReverse);
-	}else if (windowNum == 1){
-		windowMotor->Set(Relay::Value::kReverse);
-	}
-}
-void ControlSS::windowStop(){
-	windowMotor->Set(Relay::Value::kOff);
-	windowNum = 0;
-}*/
-
 //methods for arm
 void ControlSS::out() {
 	armMotor1->Set(1);
@@ -207,7 +166,6 @@ void ControlSS::stopRotate(){
 //gyro methods
 void ControlSS::updateGyro(){
 	angle = gyro->GetAngle();
-	Wait(0.3);
 }
 
 //utility methods
@@ -425,4 +383,15 @@ void ControlSS::runSequence(int x){
 		SmartDashboard::PutString("Messages: ", "Loading sequence complete");
 	}
 
+}
+
+//methods for intake
+void ControlSS::UpIntake() {
+	intakeMotor->Set(0.3);
+}
+void ControlSS::DownIntake() {
+	intakeMotor->Set(-0.3);
+}
+void ControlSS::StopIntake(){
+	intakeMotor->Set(0.0);
 }
