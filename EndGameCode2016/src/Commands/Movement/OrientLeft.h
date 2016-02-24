@@ -1,12 +1,10 @@
 #ifndef ORIENTLEFT_H
 #define ORIENTLEFT_H
 
-
 #include "Commands/Subsystem.h"
 #include "../../Robot.h"
 
-class OrientLeft: public Command
-{
+class OrientLeft: public Command{
 public:
 	OrientLeft();
 	void Initialize();
