@@ -1,8 +1,8 @@
 #include "Def4CG.h"
 #include "../../Robot.h"
-#include "../../Commands/Movement/DriveToDefense.h"
-#include "../../Commands/Defense/Def4.h"
-#include "../../Commands/Movement/DriveForwardSlow.h"
+#include "../Movement/DriveToDefense.h"
+#include "../Defense/Def4.h"
+#include "../Movement/DriveForwardSlow.h"
 
 Def4CG::Def4CG()
 {

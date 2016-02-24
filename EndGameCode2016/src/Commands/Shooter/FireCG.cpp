@@ -1,7 +1,7 @@
 #include "FireCG.h"
-#include "../../Commands/Shooter/fireC.h"
+#include "../Shooter/fireC.h"
 #include "../../Robot.h"
-#include "../../Commands/Movement/SmallReverse.h"
+#include "../Movement/SmallReverse.h"
 
 FireCG::FireCG()
 {

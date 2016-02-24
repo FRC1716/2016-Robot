@@ -1,6 +1,6 @@
 #include "After3CG.h"
-#include "../../Commands/Movement/DriveReverse.h"
-#include "../../Commands/Movement/DriveReverseSlow.h"
+#include "../Movement/DriveReverse.h"
+#include "../Movement/DriveReverseSlow.h"
 #include "../../Robot.h"
 
 After3CG::After3CG()

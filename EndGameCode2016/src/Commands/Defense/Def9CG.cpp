@@ -1,6 +1,6 @@
 #include "Def9CG.h"
 #include "../../Robot.h"
-#include "../../Commands/Movement/DriveToDefense.h"
+#include "../Movement/DriveToDefense.h"
 
 Def9CG::Def9CG()
 {

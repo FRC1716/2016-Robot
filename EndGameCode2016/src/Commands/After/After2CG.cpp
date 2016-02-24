@@ -1,6 +1,6 @@
 #include "After2CG.h"
-#include "../../Commands/Shooter/fireC.h"
-#include "../../Commands/Shooter/FireCG.h"
+#include "../Shooter/fireC.h"
+#include "../Shooter/FireCG.h"
 
 After2CG::After2CG()
 {

@@ -1,8 +1,8 @@
 #include "Def8CG.h"
 #include "../../Robot.h"
-#include "../../Commands/Movement/DriveToDefense.h"
-#include "../../Commands/Defense/Def8.h"
-#include "../../Commands/Movement/DriveForwardSlow.h"
+#include "../Movement/DriveToDefense.h"
+#include "../Defense/Def8.h"
+#include "../Movement/DriveForwardSlow.h"
 
 Def8CG::Def8CG()
 {

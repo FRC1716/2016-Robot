@@ -1,7 +1,7 @@
 #include "../Defense/Def5CG.h"
 
 #include "../../Robot.h"
-#include "../../Commands/Movement/DriveToDefense.h"
+#include "../Movement/DriveToDefense.h"
 
 Def5CG::Def5CG()
 {

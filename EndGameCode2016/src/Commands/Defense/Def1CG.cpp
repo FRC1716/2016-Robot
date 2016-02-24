@@ -1,9 +1,9 @@
 #include "Def1CG.h"
-#include "../../Commands/Movement/DriveToDefense.h"
-#include "../../Commands/Defense/Def1.h"
-#include "../../Commands/Movement/DriveReverse.h"
-#include "../../Commands/Movement/DriveReverseSlow.h"
-#include "../../Commands/Movement/DriveForwardSlow.h"
+#include "../Movement/DriveToDefense.h"
+#include "../Defense/Def1.h"
+#include "../Movement/DriveReverse.h"
+#include "../Movement/DriveReverseSlow.h"
+#include "../Movement/DriveForwardSlow.h"
 #include "../../Robot.h"
 
 Def1CG::Def1CG()
